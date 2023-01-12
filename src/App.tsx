@@ -1,10 +1,16 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from "./components/layout/Layout";
+
+
 
 function App() {
   return (
-    <>
-      <h1>APP</h1>
-    </>
+      <Routes>
+          <Route path="/" element={<Layout />}>
+              <Route path="Home" />
+          </Route>
+      </Routes>
   );
 }
 
