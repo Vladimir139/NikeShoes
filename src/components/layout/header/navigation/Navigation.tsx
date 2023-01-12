@@ -4,7 +4,7 @@ import {ListLinks, Nav, NavLinkHeader, NikeLogo} from "./NavigationElements";
 const Navigation:FC = () => {
     return (
         <Nav>
-            <NikeLogo src="%PUBLIC_URL%/logoNike.svg"></NikeLogo>
+            <NikeLogo src="/img/logoNike.svg"></NikeLogo>
             <ListLinks>
                 <NavLinkHeader to="/" >Home</NavLinkHeader>
                 <NavLinkHeader to="about" >About</NavLinkHeader>
