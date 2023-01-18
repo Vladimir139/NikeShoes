@@ -1,15 +1,19 @@
 import React, {FC} from 'react';
-import {ListLinks, Nav, NavLinkHeader, NikeLogo} from "./NavigationElements";
-
+import {ListLinks, Nav, NavLinkHeader} from "./NavigationElements";
+import '@assets/styles/activenav.css'
+import {useTypedSelector} from "@hooks/useTypedSelector";
 const Navigation:FC = () => {
+  const cart = useTypedSelector(state => state.basket.cartItems)
+
     return (
         <Nav>
-            <NikeLogo src="/img/logoNike.svg"></NikeLogo>
             <ListLinks>
                 <NavLinkHeader to="/" >Home</NavLinkHeader>
                 <NavLinkHeader to="about" >About</NavLinkHeader>
                 <NavLinkHeader to="products" >Products</NavLinkHeader>
-                <NavLinkHeader to="order" ></NavLinkHeader>
+                <NavLinkHeader to="basket" >
+                  {cart.length ? <span>{cart.length}</span> : ''}
+                </NavLinkHeader>
             </ListLinks>
         </Nav>
     );

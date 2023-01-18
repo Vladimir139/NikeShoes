@@ -1,7 +1,7 @@
-export interface Isneakers {
+export interface ISneakers {
     urlImg: string
     title: string
-    price: string
+    price: number
     id: number
     latestDesign?: boolean
 }

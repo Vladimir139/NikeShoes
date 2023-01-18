@@ -1,14 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from "./components/layout/Layout";
-
-
+import Home from "@pages/home/Home";
+import About from "@pages/about/About";
+import Products from "@pages/products/Products";
+import Basket from "@pages/basket/Basket";
 
 function App() {
   return (
       <Routes>
           <Route path="/" element={<Layout />}>
-              <Route path="Home" />
+            <Route index element={<Home />}/>
+            <Route path="about" element={<About />}/>
+            <Route path="products" element={<Products />}/>
+            <Route path="basket" element={<Basket />}/>
           </Route>
       </Routes>
   );

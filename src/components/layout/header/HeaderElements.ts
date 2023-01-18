@@ -10,4 +10,12 @@ export const Logo = styled.h1`
   font-family: 'Merienda One', cursive;
   text-align: center;
   margin: 20px auto;
+  
+  @media (max-width: 501px) {
+    font-size: 24px;
+  }
 `;
+
+export const HeaderWrapper = styled.header`
+  
+`
