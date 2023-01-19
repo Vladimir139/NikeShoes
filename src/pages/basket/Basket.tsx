@@ -20,6 +20,7 @@ const Basket:FC = () => {
   const cart = useTypedSelector(state => state.basket.cartItems)
 
   const total = cart.reduce((acc, item) => acc + (item.product.price * item.quantity), 0)
+  const aroundTotal = Number(total.toString().slice(0, 6))
 
   const {clearAllCart} = useActions()
 
@@ -36,7 +37,7 @@ const Basket:FC = () => {
           <BoxOrder>
             <OrderTitle>Order Summary</OrderTitle>
             <TotalItems>Total Items : {cart.length}</TotalItems>
-            <TotalAmount>Total Amount : <span> ${total}</span></TotalAmount>
+            <TotalAmount>Total Amount : <span> ${aroundTotal}</span></TotalAmount>
             <ProceedToCheckoutBtn onClick={() => endActions(clearAllCart)}>Proceed to Checkout</ProceedToCheckoutBtn>
           </BoxOrder>
           <WrapperYourProducts>

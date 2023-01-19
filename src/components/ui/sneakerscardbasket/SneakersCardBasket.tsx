@@ -31,7 +31,7 @@ const SneakersCardBasket:FC<ISneakers> = ({title, price, urlImg, id}) => {
       <RemoveButton onClick={() => removeFromCart({id: id})}>
         <img src="/img/basket/removeBtn.svg" alt=""/>
       </RemoveButton>
-      <SneakersPrice>{price}</SneakersPrice>
+      <SneakersPrice>${price}</SneakersPrice>
       <SneakersCount>
         Items &nbsp;
         <IncrementButton

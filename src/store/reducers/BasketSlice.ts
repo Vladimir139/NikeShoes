@@ -25,7 +25,7 @@ export const basketSlice = createSlice({
     },
     changeQuantity: (state, action: PayloadAction<IChangeQuantityPayload>) => {
       const {id, type} = action.payload
-      const item = state.cartItems.find(item => item.id === id)
+      const item = state.cartItems.find(item => item.product.id === id)
       if (item) type === 'plus' ? item.quantity++ : item.quantity--
     },
     clearAllCart: (state) => {

@@ -17,7 +17,7 @@ const SneakersCardProducts:FC<ISneakers> = (item) => {
   return (
     <SneakersItemProducts>
       <SneakersTitleProducts>{item.title}</SneakersTitleProducts>
-      <SneakersPriceProducts>{item.price}</SneakersPriceProducts>
+      <SneakersPriceProducts>${item.price}</SneakersPriceProducts>
       <SneakersImageProducts src={item.urlImg}></SneakersImageProducts>
       <ProdBuyButton onClick={() => {
         addToCart({product: item, quantity: 1})
