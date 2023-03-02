@@ -9,7 +9,7 @@ import {
   AboutWrapper, WrapperAboutNike
 } from "@pages/about/AboutElements";
 
-const About:FC= () => {
+export const About:FC= () => {
   return (
     <>
       <Container>
@@ -37,5 +37,3 @@ const About:FC= () => {
     </>
   );
 };
-
-export default About;

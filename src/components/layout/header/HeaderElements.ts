@@ -7,15 +7,13 @@ export const Logo = styled.h1`
   font-weight: 600;
   font-size: 32px;
   color: #500619;
-  font-family: 'Merienda One', cursive;
+  font-family: "Merienda One", cursive;
   text-align: center;
   margin: 20px auto;
-  
+
   @media (max-width: 501px) {
     font-size: 24px;
   }
 `;
 
-export const HeaderWrapper = styled.header`
-  
-`
+export const HeaderWrapper = styled.header``;
